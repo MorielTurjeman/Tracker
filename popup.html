@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./popup.js" ></script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <span>Select Tracker</span>
+          <select id="trackerSelector" onchange="showTrackerInfo()">
+            <option value="facebook">Facebook</option>
+            <option value="google_analytics">Google Analytics</option>
+            <option value="twitter">Twitter</option>
+            <option value="scorecard">Scorecard</option>
+            <option value="taboola">Taboola</option>
+          </select>
+        </td>
+        <td>
+          <span id="tracker"></span>
+        </td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>
+
