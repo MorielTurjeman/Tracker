@@ -11,6 +11,9 @@ function getTrackersInWebsite() {
 }
 
 function showTrackerInfo() {
-  getSpecificTracker(document.getElementById('selectedTracker').selected)
-  
+  getSpecificTracker(document.getElementById('trackerSelector').value)
+}
 
+window.onload = (ev) => {
+  document.getElementById('trackerSelector').onchange = showTrackerInfo;
+}
