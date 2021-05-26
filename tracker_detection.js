@@ -2,7 +2,6 @@
 window.onload = () => {
     // trackers can be found in many ways, the most common is script with a link to some javascript code on the tracking website, such as facebook, twitter and more.
     // other trackers can be found in img tags such as facebook's tracker
-    
     const scripts = document.getElementsByTagName("script") //all scripts
     const imgs = document.getElementsByTagName("img")
 
@@ -15,20 +14,32 @@ window.onload = () => {
         scorecard: false,
         taboola: false
     }
-    
+
     tags.forEach(t => {
-        if (t.src.includes('twitter.com'))
+        if (t.src.includes('twitter.com')) {
             active_trackers.twitter = true
-        else if (t.src.includes('google-analytics.com'))
+            console.log(t)
+        }
+        else if (t.src.includes('google-analytics.com')) {
             active_trackers.google_analytics = true
-        else if (t.src.includes('connect.facebook.net') || t.src.includes('facebook.com/tr'))
+            console.log(t)
+
+        } else if (t.src.includes('connect.facebook.net') || t.src.includes('facebook.com/tr')) {
             active_trackers.facebook = true
-        else if (t.src.includes('taboola.com'))
+            console.log(t)
+
+        } else if (t.src.includes('taboola.com')) {
             active_trackers.taboola = true
-        else if (t.src.includes('scorecardresearch.com') || t.src.includes('scoreresearch.com'))
+            console.log(t)
+
+        } else if (t.src.includes('scorecardresearch.com') || t.src.includes('scoreresearch.com')) {
             active_trackers.scorecard = true
+            console.log(t)
+
+        }
 
     })
+
 
     chrome.runtime.sendMessage({
         subject: 'collectTrackerInfo',

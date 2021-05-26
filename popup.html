@@ -1,4 +1,60 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Track the Trackers</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="popup.js" async></script>
+</head>
+
+<body id="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>TrackerTracker</h1>
+        <Label for="currentInfo">Current website</Label>
+        <ul id="currentInfo" class="list-group">
+          <li class="list-group-item list-group-item-secondary" id="facebook">Facebook</li>
+          <li class="list-group-item list-group-item-secondary" id="twitter">Twitter</li>
+          <li class="list-group-item list-group-item-secondary" id="taboola">Taboola</li>
+          <li class="list-group-item list-group-item-secondary" id="scorecard">Scorecard</li>
+          <li class="list-group-item list-group-item-secondary" id="google_analytics">Google Analytics</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="trackerSelector">
+            Selected Tracker
+          </label>
+          <select id="trackerSelector" class="custom-select">
+            <option selected value="None"></option>
+            <option value="facebook">Facebook</option>
+            <option value="google_analytics">Google Analytics</option>
+            <option value="twitter">Twitter</option>
+            <option value="scorecard">Scorecard</option>
+            <option value="taboola">Taboola</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-12">
+        <ul id="selectedInfo" class="list-group p-3">
+        </ul>
+      </div>
+      <br/>
+    </div>
+  </div>
+</body>
+
+
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     
@@ -9,6 +65,7 @@
         <td>
           <span>Select Tracker</span>
           <select id="trackerSelector">
+            <option value="None"></option>
             <option value="facebook">Facebook</option>
             <option value="google_analytics">Google Analytics</option>
             <option value="twitter">Twitter</option>
@@ -25,4 +82,4 @@
     <script src="popup.js" ></script>
   </body>
 </html>
-
+ -->
